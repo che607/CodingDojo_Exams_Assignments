@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='en' ng-app='app'>
+  <head>
+    <meta charset="utf-8">
+    <title>Trivia Game</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="angular/angular.js"></script>
+    <script src="angular-cookies/angular-cookies.js"></script>
+    <script src="angular-route/angular-route.js"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <script src="controllers/mainController.js" charset="utf-8"></script>
+    <script src="controllers/navController.js" charset="utf-8"></script>
+    <script src="controllers/triviaController.js" charset="utf-8"></script>
+    <script src="controllers/currentUserController.js" charset="utf-8"></script>
+    <script src="factories/triviaFactory.js" charset="utf-8"></script>
+    <script src="services/auth.js"></script>
+    <script src="services/user.js"></script>
+  </head>
+  <body>
+    <ng-view></ng-view>
+  </body>
+</html>

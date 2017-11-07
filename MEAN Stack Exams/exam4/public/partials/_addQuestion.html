@@ -1,0 +1,22 @@
+<ng-include src="'partials/shared/_nav.html'"></ng-include>
+<a href="#!/main">Home</a>
+<br>
+<h1>New Question</h1>
+<br>
+<br>
+<div ng-controller='qaController'>
+  <form ng-submit="addQuestion(question)">
+    Question:<input type="text" name="question" ng-model='question.question'><br>
+    Description(optional):<input type="text" name="description" ng-model='question.description'><br>
+    <br>
+    <a href="#!/main"><button>Cancel</button></a>
+    <button>Submit</button>
+  </form>
+  <br>
+  <br>
+  <div ng-if='errors'>
+    <ul>
+      <li ng-repeat='error in errors'>{{ error }}</li>
+    </ul>
+  </div>
+</div>

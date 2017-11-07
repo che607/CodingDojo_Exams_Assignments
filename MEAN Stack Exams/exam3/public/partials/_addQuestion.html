@@ -1,0 +1,23 @@
+<ng-include src="'partials/shared/_nav.html'"></ng-include>
+<br>
+<h1>New Question</h1>
+<br>
+<br>
+<div ng-controller='triviaController'>
+  <form ng-submit="addQuestion(question)">
+    Question:<label for=""><input type="text" name="question" ng-model='question.question'></label><br>
+    Correct Answer:<label for=""><input type="text" name="correctAnswer" ng-model='question.correct'></label><br>
+    Fake Answer 1:<label for=""><input type="text" name="fakeanswer1" ng-model='question.fake1'></label><br>
+    Fake Answer 2:<label for=""><input type="text" name="fakeanswer2" ng-model='question.fake2'></label>
+    <br>
+    <a href="#!/main"><button>Cancel</button></a>
+    <button>Add Question</button>
+  </form>
+  <br>
+  <br>
+  <div ng-if='errors'>
+    <ul>
+      <li ng-repeat='error in errors'>{{ error }}</li>
+    </ul>
+  </div>
+</div>

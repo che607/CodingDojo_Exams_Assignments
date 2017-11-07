@@ -1,0 +1,13 @@
+<ng-include src="'partials/shared/_nav.html'"></ng-include>
+<div ng-controller="qaController" ng-init="init(param)">
+<a href="#!/main">Home | </a><a href="#!/answerQuestion/{{question[0]._id}}">Answer This Question</a>
+<br>
+<h1>{{question[0].question}}</h1>
+<h4>{{question[0].description}}</h4>
+<br>
+<br>
+<br>
+<div ng-repeat="answer in questionWithAnswers[0].answers">
+  <p>{{answer.answer}}</p>
+</div>
+</div>

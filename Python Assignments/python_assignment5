@@ -1,0 +1,10 @@
+def multiply([2,4,10,16],5):
+    a = []
+    c = []
+    x  = 0
+    while x < len(a):
+            c.append(a[x] * b)
+            x += 1
+    print c
+
+multiply([2,4,10,16],5)

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tiger Assignment</title>
+  </head>
+  <body>
+    <a href="/tigers/new"><input type="submit" value="Create New Tiger!"></a>
+    <br>
+    <h3>My Tigers:</h3>
+    <% for (var i = 0; i < tigers.length; i++) { %>
+        <a href="/tigers/<%= tigers[i]._id %>"><h5><%= tigers[i].name %></h5></a>
+        <a href="/tigers/edit/<%= tigers[i]._id %>"><h5>Edit Tiger</h5></a>
+        <form action="/tigers/destroy/<%= tigers[i]._id %>" method="post">
+          <input type="submit" value="Delete Tiger!">
+        </form>
+        <p>_______________________________</p>
+    <% } %>
+  </body>
+</html>

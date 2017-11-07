@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Group Chat</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type ="text/javascript">
+        $(document).ready(function (){
+
+            var socket = io.connect();
+
+            var currentUser;
+
+            var name = prompt("Your Name:");
+            socket.emit("name", {name: name});
+
+            socket.on('error_response', function (data){
+                $("h2").text(data.error);
+                var name = prompt("Your Name:");
+                socket.emit("name", {name: name});
+            });
+
+            socket.on('user_response', function (data){
+                $("h2").text(" ");
+                currentUser = data.user
+                console.log(currentUser);
+            });
+
+            socket.on('user_response1', function (data){
+                $("h2").text(" ");
+                currentUser = data.user
+                console.log(currentUser)
+                // for(var i=0; i < data.messages.length; i++){
+                $('#messages').append(data.user + ": " + data.message + "<br>");
+                // }
+                  // data.messages + "<br>"
+
+            });
+
+            $("#new_message").submit(function (event){
+              event.preventDefault();
+              // var str = $( "form" ).serialize();
+              // console.log(str)
+              socket.emit("submit", {message: $("#postmessage").val(), user: currentUser});
+            });
+
+        })
+    </script>
+</head>
+<body>
+  <h2></h2>
+  <h1>Conversation Board</h1>
+  <div id="messages"></div>
+  <br>
+  <br>
+  <form id="new_message">
+    <input type='text' id="postmessage" name='postmessage' value='enter your message here'>
+    <br>
+    <input type='submit' value='Submit' class='submit'>
+  </form>
+</body>
+</html>

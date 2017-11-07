@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+  <head>
+    <meta charset="utf-8">
+    <title>First Angular Project</title>
+    <script src = 'bower_components/angular/angular.js'></script>
+    <script>
+      var app = angular.module('app', []);
+
+      app.controller('divController', ['$scope', function($scope){
+        $scope.myName = 'Ricardo'; // your name!
+        $scope.myFavoriteLanguage = 'JavaScript';
+        $scope.myFavoriteJSLibrary = 'Angular/Jquery';
+      }]);
+
+      app.controller('divController', ['$scope', function($scope){
+        $scope.myName = 'Ricardo'; // your name!
+        $scope.myFavoriteLanguage = 'JavaScript';
+        $scope.myFavoriteJSLibrary = 'Angular/Jquery';
+      }]);
+
+    </script>
+  </head>
+  <body ng-init=" dojos=['Online', 'In Class'] ">
+    <div ng-controller = "divController">
+      <p>My name is {{ myName }}.  My favorite programming language is {{ myFavoriteLanguage }}.  My favorite JavaScript library is {{ myFavoriteJSLibrary }}.</p>
+    </div>
+    ng-bind:  <h3 ng-bind='Alex=1; Ricardo=2; Alex * Ricardo;'></h3>
+    ng-hide:  <h3 ng-hide='true'>Hello</h3><br>
+    ng-show:  <h3 ng-show='true'>Hello</h3>
+    ng-init:  {{ dojos }} <br>
+    ng-model:  <input type="text" ng-model='name1'>:  Currently typing:  {{ name1 }} <br>
+    ng-repeat:<ul>
+       <li ng-repeat="dojo in dojos">{{dojo}}</li>
+   </ul><br>
+   ng-if:<h3 ng-if="true">Show me!</h3><br>
+   <button ng-click="count = count + 1" ng-init="count=0">
+  Increment
+</button>
+<span>
+  count: {{count}}
+</span>
+
+  </body>
+</html>

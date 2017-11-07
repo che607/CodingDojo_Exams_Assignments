@@ -1,0 +1,7 @@
+<nav ng-controller='navController'>
+  <div ng-if='isAuthed'>
+    <a href="#!/main" class="header">Home | </a>
+    <a href="#!/addQuestion"> Add a Question</a>
+    <button ng-click='logout()' class="logout">Logout</button>
+  </div>
+</nav>

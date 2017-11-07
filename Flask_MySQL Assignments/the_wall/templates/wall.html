@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Wall - Forum Page</title>
+  </head>
+  <body>
+    Post a message:
+    <form action='/message', method='POST'>
+      <input type="text" name="message" id="message">
+      <input type="submit" value="Post Message">
+    </form>
+    {% for user in all_users: %}
+      {{ users['message'] }}
+    {% endfor %}
+  </body>
+</html>

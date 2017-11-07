@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title>Basic Validation Example</title>
+</head>
+<body>
+  <h1>Enter a Valid(Any) Name!</h1>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+        <p>{{message}}</p>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+  <form action='/process' method='POST'>
+    Name:<input type="text" name="name"><br>
+    <select name="location">
+      <option value="New York City">New York City</option>
+      <option value="Seattle">Seattle</option>
+      <option value="Washington DC" selected>Washington, DC</option>
+      <option value="Miami">Miami</option>
+    </select><br>
+    <select name="language">
+      <option value="html">HTML</option>
+      <option value="CSS">CSS</option>
+      <option value="Python" selected>Python</option>
+      <option value="Javascript">Javascript</option>
+    </select><br>
+    Comment (optional):<input type="text" name="comment">
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

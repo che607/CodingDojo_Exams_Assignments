@@ -1,0 +1,127 @@
+*{
+  margin: 0px;
+  padding: 0px:
+}
+#wrapper{
+  background-color: #1f3037;
+  width: 899px;
+  height: 1133px;
+  margin: auto;
+  /*padding: 19px;*/
+}
+.heading{
+  width: 899px;
+  height: 48px;
+  background-color: #1f3037;
+  /*margin-top: 6px;*/
+  padding-top: 18px;
+}
+.yourwebsitetitle{
+  display: inline-block;
+  font-size: 25px;
+  /*margin-top: 0px;*/
+  margin-left: 16px;
+  font-family: Arial, sans-serif, Times;
+  vertical-align: top;
+  vertical-align: top;
+}
+.yourwebsitetitle1{
+  color: #fffcff;
+}
+.yourwebsitetitle2{
+    color: #c0c1af;
+}
+.logo{
+  margin-left: 598px;
+  display: inline-block;
+  border-style: solid;
+  border-color: #a7bab8;
+  border-width: thin;
+  width: 38px;
+  height: 38px;
+  margin-top: -6px;
+}
+.menu_bar{
+  width: 899px;
+  height: 31px;
+  background: #41525a;
+    background: -webkit-linear-gradient(180deg, #41525a, #1d3036);
+    background: -o-linear-gradient(180deg, #41525a, #1d3036);
+    background: -moz-linear-gradient(180deg, #41525a, #1d3036);
+    /*background: linear-gradient(#41525a, #213239);*/
+    background: linear-gradient(to bottom, #41525a 0%, #213239 45%);
+}
+.button{
+  width: 101px;
+  height: 10px;
+  display: inline-block;
+  margin-top: 6px;
+  text-align: center;
+  vertical-align: top;
+}
+.stick{
+  width: 1px;
+  height: 34px;
+  background-color: #42535b;
+  margin-top: 5px;
+  display: inline-block;
+}
+.edit{
+  text-decoration: none;
+  font-family: Arial, sans-serif, Times;
+  font-weight: bold;
+  color: #a7bab8;
+  font-size: 12px;
+}
+.banner{
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-width: thin;
+}
+.break{
+  display: block;
+  background-color: white;
+  height: 18px;
+  margin-top: -4px;
+  border-bottom-style: solid;
+  border-width: thin;
+  background: #4d6861;
+    background: -webkit-linear-gradient(180deg, #4d6861, #283434);
+    background: -o-linear-gradient(180deg, #4d6861, #283434);
+    background: -moz-linear-gradient(180deg, #4d6861, #283434);
+    /*background: linear-gradient(#41525a, #213239);*/
+    background: linear-gradient(to right, #4d6861 0%, #283434 70%);
+}
+.leftside{
+  width: 177px;
+  padding: 16px;
+  height: 700px;
+  display: inline-block;
+  background-color: #1f3037;
+}
+.center{
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background-color: blue;
+}
+p{
+  color: #a7bab8;
+  font-family: Arial, sans-serif, Times;
+  font-weight: bold;
+  font-size: 12px;
+}
+input{
+  height: 20px;
+  width: 128px;
+  display: inline-block;
+  vertical-align: top;
+}
+.search_icon{
+  height: 18px;
+  width: 18px;
+  border-color: white;
+  border-style: solid;
+  border-width: thin;
+  margin-left: 4px;
+}

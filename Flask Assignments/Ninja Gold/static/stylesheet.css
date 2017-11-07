@@ -1,0 +1,38 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+#wrapper{
+  background-color: grey;
+  margin: auto;
+  width: 800px;
+  height: 590px;
+  padding: 20px;
+}
+.blocks{
+  background-color: #ccccb3;
+  width: 167px;
+  height: 175px;
+  display: inline-block;
+  margin: 15px;
+}
+#bottom_bar{
+  background-color: #ccccb3;
+  width: 771px;
+  height: 250px;
+  margin: 15px;
+  padding: 10px;
+}
+h2{
+  text-align: center;
+  font-weight: bold;
+  margin-top: 25px;
+}
+p{
+  text-align: center;
+  font-weight: bold;
+}
+form{
+  margin-left: 50px;
+  margin-top:30px;
+}

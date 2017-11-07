@@ -1,0 +1,21 @@
+<ng-include src="'partials/shared/_nav.html'"></ng-include>
+<div ng-controller="triviaController">
+  <br>
+  <p>Hi, {{currentUser}}!</p>
+  <p>Choose an answer for each of the questions and submit the test once done.</p>
+  <p>Good Luck!</p>
+  <br>
+  <br>
+  <form ng-submit="playTrivia(newPlay)" ng-repeat="question in questions = (questions|orderBy:randomize).slice(0, 3)">
+    <div>
+      <h3>{{question.question}}</h3><br>
+      <input type="radio" name='{{question.question}}' ng-model="playTrivia.wrong">{{question.fake1}}<br>
+      <input type="radio" name='{{question.question}}' ng-model="playTrivia.right">{{question.correct}}<br>
+      <input type="radio" name='{{question.question}}' ng-model="playTrivia.wrong">{{question.fake2}}<br>
+      <hr>
+    </div>
+  </form>
+  <input type="hidden" name="question" ng-model='playTrivia.user' value="{{currentUser}}">
+  <a href="#!/main"><button>Cancel</button></a>
+  <button>Submit</button>
+</div>

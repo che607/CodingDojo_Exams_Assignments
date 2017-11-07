@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tiger Assignment</title>
+  </head>
+  <body>
+    <h1>Add New Tiger!</h1>
+    <br>
+    <br>
+    <% if(typeof(errors) != 'undefined' ) { %>
+    <% for (var x in errors) { %>
+     <h3><%= errors[x].message %></h3>
+    <% } %>
+    <% } %>
+    <br>
+    <br>
+    <form action="/tigers" method="post">
+      Name:<br>
+      <input type="text" name="name">
+      <br>
+      Height:<br>
+      <input type="text" name="height">
+      <br>
+      Weight:<br>
+      <input type="text" name="weight">
+      <br>
+      Location:<br>
+      <input type="text" name="location">
+      <br><br>
+      <input type="submit" value="Add Tiger!">
+    </form>
+  </body>
+</html>

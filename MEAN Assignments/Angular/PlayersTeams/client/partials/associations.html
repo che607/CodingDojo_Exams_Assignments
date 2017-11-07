@@ -1,0 +1,28 @@
+<div id="assocontroller" ng-controller='assoController'>
+  <form>
+  <input list="players" name="player" ng-model="newAsso.name">
+  <datalist id="players">
+    <option value="{{player.name}}" ng-repeat="player in players track by $index">
+  </datalist>
+  <input list="teams" name="team" ng-model="newAsso.team">
+  <datalist id="teams">
+    <option value="{{team.name}}" ng-repeat="team in teams track by $index">
+  </datalist>
+  <input type="submit" value="Assign Player to Team" ng-click='addAsso()'>
+</form>
+
+  <br>
+  <br>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Team</th>
+      <th>Actions</th>
+    </tr>
+    <tr ng-repeat="asso in assos track by $index">
+      <td>{{asso.name}}</td>
+      <td><a href="#!/{{asso.team}}" ng-bind="asso.team">{{asso.team}}</a></td>
+      <td><input type="submit" value="Clear Assignment" ng-click='remove(asso)'></td>
+    </tr>
+  </table>
+</div>

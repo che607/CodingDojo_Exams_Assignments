@@ -1,0 +1,14 @@
+<ng-include src="'partials/shared/_nav.html'"></ng-include>
+<div ng-controller="bidController">
+  <br>
+  <p>{{currentUser}} ended the bid.</p>
+  <p>Highest bidder per Product.</p>
+  <br>
+  <br>
+  <div class='product2'>Product 1:  Desk<br><p>{{bids11[0].user}} - ${{bids11[0].bid}}</p></div>
+  <div class='product2'>Product 2:  Car<br><p>{{bids11[0].user}} - ${{bids21[0].bid}}</p></div>
+  <div class='product2'>Product 3:  Bracelet<br><p>{{bids11[0].user}} - ${{bids31[0].bid}}</p></div>
+  <br>
+  <br>
+  <a href="#!/main" class="endBid"><button ng-click="startBid()">Start Bid</button></a>
+</div>

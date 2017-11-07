@@ -1,0 +1,125 @@
+<!DOCTYPE>
+    <html lang="eng">
+        <head>
+           <meta charset="utf-8">
+           <title>JQuery Assignment</title>
+           <link rel="stylesheet" type="text/css" href="stylesheet.css">
+           <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+           <script type="text/javascript">
+              $(document).ready(function(){
+
+              $('p').css('background-color', 'red');
+
+              $('div p')
+
+              $('.hide').click(function(){
+                $('p').hide();
+              })
+
+              $('.show').click(function(){
+                $('p').show();
+              });
+
+              $('.toggle').click(function(){
+                $('p').toggle("slow");
+              });
+
+              $('.slidetoggle').click(function(){
+                $('p').slideToggle();
+              });
+
+              $('.slidedown').click(function(){
+                $('p').slideDown();
+              });
+
+              $('.slideup').click(function(){
+                $('p').slideUp();
+              });
+
+              $('.fadein').click(function(){
+                $('p').fadeIn();
+              });
+
+              $('.fadeout').click(function(){
+                $('p').fadeOut();
+              });
+
+              $('.before').click(function(){
+                $('p').before("hi!");
+              });
+
+              $('.after').click(function(){
+                $('p').after("bye!");
+              });
+
+              $('.append').click(function(){
+                $('p').append("it changed!");
+              });
+
+              $('.html').click(function(){
+                $('p').html("<h1>hi<h1>");
+              });
+
+              $('.attr').click(function(){
+                $('p').attr("nice!");
+              });
+
+              $('.val').click(function(){
+                $('p').val("yo!!");
+              });
+
+              $('.text').click(function(){
+                $('p').text("text change!");
+              });
+
+              $('.data').click(function(){
+                $('p').data("return this");
+              });
+
+            });
+           </script>
+        </head>
+        <body>
+            <div id="wrapper">
+                <h1 class="title">Hide/Show</h1>
+                <button class="button1 hide">Hide Button</button>
+                <button class="button2 show">Show Button</button>
+                <p>Click the button to hide this paragraph</p>
+                <div class='line'></div>
+                <h1 class="title">Toggle</h1>
+                <button class="button1 toggle">Toggle/Slide Toggle</button>
+                <button class="button2 slidetoggle">Slide Toggle Button</button>
+                <p>Click the button to hide this paragraph</p>
+                <div class='line'></div>
+                <h1 class="title">Slide Down/Slide Up</h1>
+                <button class="button1 slidedown">Slide Down</button><!-- cant get to work -->
+                <button class="button2 slideup">Slide Up</button><!-- cant get to work -->
+                <p>Click the button to hide this paragraph</p>
+                <div class='line'></div>
+                <h1 class="title">Fade In/Fade Out</h1>
+                <button class="button1 fadein">Fade In</button>
+                <button class="button2 fadeout">Fade Out</button>
+                <p>Click the button to hide this paragraph</p>
+                <div class='line'></div>
+                <h1 class="title">Before/Ater</h1>
+                <button class="button1 before">Before</button>
+                <button class="button2 after">After</button>
+                <p>Click the button to hide this paragraph</p>
+                <div class='line'></div>
+                <h1 class="title">Append/Html</h1>
+                <button class="button1 append">Append</button>
+                <button class="button2 html">Html</button>
+                <p>Click the button to hide this paragraph</p>
+                <div class='line'></div>
+                <h1 class="title">Attr/Val</h1>
+                <button class="button1 attr">Attr</button>
+                <button class="button2 val">Val</button>
+                <p>Click the button to hide this paragraph</p>
+                <div class='line'></div>
+                <h1 class="title">Text/Data</h1>
+                <button class="button1 text">Text</button>
+                <button class="button2 data">Data</button>
+                <p>Click the button to hide this paragraph</p>
+            </div>
+        </body>
+    </html>

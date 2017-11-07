@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <title>jQuery Assignment</title>
+            <link rel="stylesheet" type="text/css" href="style.css">
+            <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <script type="text/javascript">
+              $(document).ready(function(){
+
+                  $('img').click(function(){
+                    $(this).hide();
+                  });
+
+                  $('button').click(function(){
+                    $('img').show();
+                  });
+
+              });
+            </script>
+        </head>
+        <body>
+            <div id=wrapper>
+            <img src="C:\Users\ricardo\Desktop\Resume_Web_Page/baby.jpg" class="photo" alt="photo">
+            <img src="C:\Users\ricardo\Desktop\Resume_Web_Page/baby.jpg" class="photo" alt="photo">
+            <img src="C:\Users\ricardo\Desktop\random shit\Pictures/mex.jpg" class="photo" alt="photo">
+            <img src="C:\Users\ricardo\Desktop\Resume_Web_Page/baby.jpg" class="photo" alt="photo">
+            <img src="C:\Users\ricardo\Desktop\Resume_Web_Page/baby.jpg" class="photo" alt="photo">
+            <img src="C:\Users\ricardo\Desktop\Resume_Web_Page/baby.jpg" class="photo" alt="photo">
+            <img src="C:\Users\ricardo\Desktop\Resume_Web_Page/baby.jpg" class="photo" alt="photo">
+            <img src="C:\Users\ricardo\Desktop\Resume_Web_Page/baby.jpg" class="photo" alt="photo">
+            <button class="button">Restore</button>
+            </div>
+        </body>
+    </hmtl>

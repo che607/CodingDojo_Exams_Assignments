@@ -1,0 +1,32 @@
+<ng-include src="'partials/shared/_nav.html'"></ng-include>
+<br>
+<br>
+<div class="outer">
+  <a href="#!/play" class='play button2'>Play!</a>
+</div>
+<br>
+<br>
+<br>
+<p class="click">Click the button to start the trivia game.</p>
+<br>
+<br>
+<form class='searchbar'>
+  <input ng-model='search.$' placeholder="Search">
+</form>
+<br>
+<br>
+<div ng-controller="triviaController" ng-init='getAppointments()'>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Score</th>
+    <th>Percentage</th>
+  </tr>
+  <tr ng-repeat="appointment in appointments | filter:search:strict | orderBy: 'date':false">
+    <td>{{appointment.date | date:'MMMM d yyyy'}}</td>
+    <td>{{appointment.time | date:'h:mm a'}}</td>
+    <td>{{appointment.user}}</td>
+    <td>{{appointment.complain}}<div ng-if="appointment.user == currentUser"><button ng-click="cancel(appointment)">Cancel</button></div></td>
+  </tr>
+</table>
+</div>

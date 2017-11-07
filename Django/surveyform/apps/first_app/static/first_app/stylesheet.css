@@ -1,0 +1,11 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+#header{
+  background-color: green;
+  font-weight: bold;
+  margin: auto;
+  text-align: center;
+  padding: auto;
+}

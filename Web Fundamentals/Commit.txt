@@ -1,0 +1,33 @@
+1.  
+C:\Users\ricardo>cd desktop
+C:\Users\ricardo\desktop>
+
+2.
+C:\Users\ricardo\desktop>md test
+
+3.
+C:\Users\ricardo\desktop>cd test
+C:\Users\ricardo\desktop\test>copy NUL index.html
+C:\Users\ricardo\desktop\test>copy NUL style.css
+C:\Users\ricardo\desktop\test>copy NUL aboutMe.txt
+
+4.
+C:\Users\ricardo\desktop\test>git add .
+C:\Users\ricardo\desktop\test>git commit -m "My first repository."
+
+5.
+C:\Users\ricardo\desktop\test>aboutMe.txt
+C:\Users\ricardo\desktop\test>git add .
+C:\Users\ricardo\desktop\test>git commit -m "updated aboutMe"
+
+6.
+C:\Users\ricardo\desktop\test>aboutMe.txt
+C:\Users\ricardo\desktop\test>git add .
+C:\Users\ricardo\desktop\test>git commit -m "added favorite movie to aboutMe"
+
+7.
+C:\Users\ricardo\desktop\test>git log
+
+8.
+C:\Users\ricardo\desktop\test>git revert -n eea37e9
+C:\Users\ricardo\desktop\test>git commit -m "reverted aboutMe"

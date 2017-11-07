@@ -1,0 +1,6 @@
+I went to database drop down menu.
+
+I selected 'connect to database'.
+
+I queried through the database using the 'use [database]' command in the 
+query box.

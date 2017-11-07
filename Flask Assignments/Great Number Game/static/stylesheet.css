@@ -1,0 +1,30 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+#wrapper{
+  background-color: grey;
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+}
+p{
+  background-color: red;
+  width: 100px;
+  height: 40px;
+  display: block;
+  margin: auto;
+  font-weight: bold;
+  padding: 70px;
+}
+h2{
+  background-color: green;
+  width: 100px;
+  height: 40px;
+  display: block;
+  margin: auto;
+  font-weight: bold;
+  padding: 70px;
+}

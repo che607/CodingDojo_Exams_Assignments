@@ -1,0 +1,63 @@
+<ng-include src="'partials/shared/_nav.html'"></ng-include>
+<br>
+<br>
+<h1>Bid Now!</h1>
+<br>
+<br>
+<div class='product'>Product 1:  Desk</div>
+<div class='product'>Product 2:  Car</div>
+<div class='product'>Product 3:  Bracelet</div>
+<br>
+<br>
+<div ng-controller="bidController">
+    <div class="form">
+      <form ng-submit="productOneBid(product1)">
+        <label for=""><input type="text" name="bid1" ng-model="product1.bid"></label>
+        <label for=""><input type="hidden" name="user1" ng-model="product1.user"></label>
+        <button>Bid</button>
+      </form>
+    </div>
+    <div class='form'>
+      <form ng-submit="productTwoBid(product2)">
+        <input type="text" name="bid2" ng-model="product2.bid">
+        <input type="hidden" name="user2" ng-model="product2.user">
+        <button>Bid</button>
+      </form>
+    </div>
+    <div class='form'>
+      <form ng-submit="productThreeBid(product3)">
+        <input type="text" name="bid3" ng-model="product3.bid">
+        <input type="hidden" name="user3" ng-model="product3.user" value="{{currentUser}}">
+        <button>Bid</button>
+      </form>
+    </div>
+    <br>
+    <br>
+    <ng-if="error"><p class="error1">{{error}}</p></ng-if>
+    <br>
+    <br>
+    <div class='currentBids'>Current Bids:</div>
+    <div class='currentBids'>Current Bids:</div>
+    <div class='currentBids'>Current Bids:</div>
+    <div class='product1'><p ng-repeat="bid in bids1 | orderBy:'-bid' | filter:search1:strict">{{bid.user}} - ${{bid.bid}}</p></div>
+    <div class='product1'><p ng-repeat="bid in bids2 | orderBy:'-bid' | filter:search2:strict">{{bid.user}} - ${{bid.bid}}</p></div>
+    <div class='product1'><p ng-repeat="bid in bids3 | orderBy:'-bid' | filter:search3:strict">{{bid.user}} - ${{bid.bid}}</p></div>
+    <div class="searchBar">
+      <form class='searchbar'>
+        <input ng-model='search1.$' placeholder="Search">
+      </form>
+    </div>
+    <div class="searchBar">
+      <form class='searchbar'>
+        <input ng-model='search2.$' placeholder="Search">
+      </form>
+    </div>
+    <div class="searchBar">
+      <form class='searchbar'>
+        <input ng-model='search3.$' placeholder="Search">
+      </form>
+    </div>
+    <br>
+    <br>
+    <button class="endBid" ng-click="endBid()">End Bid</button>
+ </div>

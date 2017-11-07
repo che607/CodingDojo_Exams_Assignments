@@ -1,0 +1,26 @@
+1.  windows key + r, type in cmd
+
+2. dir
+
+3.  md test
+
+4.  c:\users\ricardo\test>md index.html
+c:\users\ricardo\test>md style.css
+c:\users\ricardo\test>md commands.txt
+
+5.  c:\users\ricardo\test>copy NUL index_2.html
+
+6.  c:\users\ricardo\test>del style.css
+
+7  c:\users\ricardo\test>cd \
+c:\
+c:\cd users
+c:\users\cd ricardo
+c:\users\ricardo>md destination
+
+8.  c:\users\ricardo>move test\index_2.html destination\index_2.html
+
+9.  c:\users\ricardo\destination>dir
+c:\users\ricardo\test>dir
+
+10.  c:\users\ricardo>rd destination

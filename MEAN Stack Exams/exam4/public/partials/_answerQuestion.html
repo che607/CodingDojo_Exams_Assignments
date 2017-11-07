@@ -1,0 +1,24 @@
+<ng-include src="'partials/shared/_nav.html'"></ng-include>
+<div ng-controller="qaController" ng-init="getQuestion(param)">
+<a href="#!/main">Home | </a><a href="#!/showAnswer/{{question[0]._id}}">Go Back To Question</a>
+<br>
+<h1>{{question[0].question}}</h1>
+<h4>{{question[0].description}}</h4>
+<br>
+<br>
+<br>
+<form ng-submit="addAnswer(answer, param)">
+  Your Answer:<input type="text" name="answer" ng-model='answer.answer'><br>
+  Supporting Details For Your Answer(optional):<input type="text" name="description" ng-model='answer.description'><br>
+  <br>
+  <a href="#!/main"><button>Cancel</button></a>
+  <button>Submit</button>
+  <br>
+  <br>
+  <div ng-if='errors'>
+    <ul>
+      <li ng-repeat='error in errors'>{{ error }}</li>
+    </ul>
+  </div>
+</form>
+</div>

@@ -1,0 +1,11 @@
+/**{
+  padding: 0px;
+  margin: 0px;
+}*/
+.button{
+  background-color: blue;
+  width: 162px;
+  height: 43px;
+  font-weight: bolder;
+  color: white;
+}

@@ -1,0 +1,33 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+#wrapper{
+  margin: auto;
+  width: 850px;
+  height: 850px;
+  background-color: grey;
+  padding: 15px;
+}
+table, th, td{
+  border: 1px solid black;
+  border-collapse: collapse;
+  font-size: 20px;
+  padding: 5px;
+}
+.form{
+  margin-top: 90px;
+  height: 350px;
+  width: 340px;
+}
+h1{
+  font-size: 40px;
+}
+.border{
+  background-color: black;
+  width: 340px;
+  height: 2px;
+}
+form{
+  text-align: right;
+}

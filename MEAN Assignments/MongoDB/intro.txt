@@ -1,0 +1,25 @@
+1.  use my_first_db
+
+2.  db.createCollection("students")
+
+3., 4. ({name: STRING, home_state: STRING, lucky_number: NUMBER, birthday: {month: NUMBER, day: NUMBER, year: NUMBER}})
+
+5. db.students.find().pretty()
+
+6.  db.students.find({home_state: "Virginia"}).pretty()
+
+7.
+a.  db.students.find({lucky_number: {$gt:  3}}).pretty()
+b.  db.students.find({lucky_number: {$lte: 10}}).pretty()
+c.  db.students.find({lucky_number: {$gte: 1, $lte: 9}}).pretty()
+
+8.  db.students.update({ home_state: "Virginia"}, {$set: { interests: [ "coding", "l                                                                                                                anguage", "MongoDB" ]}})
+
+9.  db.students.update({ name: "Ricardo"}, {$push: { interests: "Reading"}})
+
+10.  db.students.update({ name: "Ricardo"}, {$push: { interests: "Taxes"}})
+
+11.  db.students.update({ name: "Ricardo"}, { $pop: { interests: 1}})
+
+
+  

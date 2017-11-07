@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Appointments</title>
+  </head>
+  <body>
+    <form action='{% url 'project:edit1' appointment.id %}' method='POST'>
+      {% csrf_token %}
+      Task:<input type="text" name="task" value="{{appointment.task}}">
+      <br>
+      Status:<select name="status">
+        <option value="pending">Pending</option>
+        <option value="missed">Missed</option>
+        <option value="done" >Done</option>
+      </select>
+      <br>
+      Date:<input type="date" name="date" value="{{appointment.date|date:"Y-m-d" }}">
+      <br>
+      Time:<input type="time" name="time" value="{{appointment.time|time:"H:i" }}">
+      <br>
+      <input type="submit" value="Add">
+    </form>
+    <br>
+    <br>
+    {% for message in messages %}
+    {{message.message}}<br>
+    {% endfor %}
+    <br>
+    <br>
+    <br>
+    <a href="{% url 'project:appointments' %}">Dashboard</a>
+    <br>
+    <br>
+    <a href="{% url 'logreg:index' %}">Logout</a>
+  </body>
+</html>

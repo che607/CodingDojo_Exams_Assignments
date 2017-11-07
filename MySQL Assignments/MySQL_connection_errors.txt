@@ -1,0 +1,40 @@
+1.
+sqlalchemy.exc.OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: NO)")
+
+-make sure you provided the right password
+
+config = {
+    'host': 'localhost',
+    'database': db,
+    'user': 'root',
+    'password': 'root',
+    'port': '8889'
+}
+
+2.
+ File "C:\Users\ricardo\Desktop\Organized Coding Dojo Assignments\Flask_MySQL Assignments\flask_mysql\mysqlconnection.py", line 8
+    'database': , # we got db as an argument
+                ^
+SyntaxError: invalid syntax
+
+-you need to have a value for the database key
+
+config = {
+                'host': 'localhost',
+                'database': db, 
+                'user': 'root',
+                'password': 'root',
+                'port': '8889' 
+        }
+
+3.
+ File "C:\Users\ricardo\Desktop\Organized Coding Dojo Assignments\Flask_MySQL Assignments\flask_mysql\mysqlconnection.py", line 15
+    app.config['SQLALCHEMY_DATABASE_URI'] = #DATABASE_URI
+                                                        ^
+SyntaxError: invalid syntax
+
+-make sure you provide the DATABASE_URI
+
+DATABASE_URI = "mysql://{}:{}@127.0.0.1:{}/{}".format(config['user'], config['password'], config['port'], config['database'])
+        app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
+        app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True

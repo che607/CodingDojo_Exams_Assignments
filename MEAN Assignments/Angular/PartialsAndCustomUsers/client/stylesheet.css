@@ -1,0 +1,46 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+#wrapper{
+  background-color: white;
+  width: 700px;
+  height: 900px;
+  margin: auto;
+}
+#userscontroller{
+  background-color: white;
+  width: 700px;
+  height: 400px;
+  border-style: double;
+  margin: auto;
+}
+#listcontroller{
+  background-color: white;
+  width: 700px;
+  height: 400px;
+  border-style: double;
+  margin: auto;
+}
+h3{
+  color: red;
+}
+a{
+  margin: auto;
+  color: red;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}

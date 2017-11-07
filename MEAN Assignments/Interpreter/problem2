@@ -1,0 +1,21 @@
+var food = "Chicken";
+function eat() {
+  food = "half-chicken";
+  console.log(food);
+  var food = "gone";
+  console.log(food);
+}
+eat();
+console.log(food);
+_________________________________
+var food
+function eat() {
+  food = "half-chicken";
+  console.log(food);
+  var food
+  food = "gone";
+  console.log(food);
+}
+food = "Chicken";
+eat();
+console.log(food);

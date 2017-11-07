@@ -1,0 +1,13 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+.message{
+  background-color: black;
+  color: blue;
+  text-align: center;
+  margin: auto;
+  width: 360px;
+  border-style: solid;
+  border-color: grey;
+}

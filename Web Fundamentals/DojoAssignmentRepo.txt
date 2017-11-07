@@ -1,0 +1,12 @@
+C:\Users\ricardo>cd dojoassignments
+C:\Users\ricardo\dojoassignments>git init
+C:\Users\ricardo\dojoassignments>git add .
+C:\Users\ricardo\dojoassignments>git commit -m "github repo assignment"
+C:\Users\ricardo\dojoassignments>git remote add origin https://github.com/che607/DojoAssignments.git
+C:\Users\ricardo\dojoassignments>git push -u origin master
+C:\Users\ricardo\dojoassignments>copy NUL readme.md
+C:\Users\ricardo\dojoassignments>readme.md
+C:\Users\ricardo\dojoassignments>git status
+C:\Users\ricardo\dojoassignments>git add .
+C:\Users\ricardo\dojoassignments>git commit -m "new file called readme"
+C:\Users\ricardo\dojoassignments>git push -u origin master

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Appointments</title>
+  </head>
+  <body>
+    Hello, {{currentUser.name}}!
+    <br>
+    <br>
+    Appointments for today, {{ today }}:
+    <table>
+      <tr>
+        <th>Tasks</th>
+        <th>Time</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+        {% for appointment in todayapp %}
+      <tr>
+        <td>{{ appointment.task }} </td>
+        <td>{{ appointment.time }} </td>
+        <td>{{ appointment.status }} </td>
+        <td>
+          <a href="{% url 'project:edit' appointment.id %}">Edit</a>
+          <a href="{% url 'project:delete' appointment.id %}">Delete</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+    <br>
+    <br>
+    <br>
+    Your Other Appointments:
+    <table>
+      <tr>
+        <th>Tasks</th>
+        <th>Date</th>
+        <th>Time</th>
+      </tr>
+        {% for appointment in otherapp %}
+      <tr>
+        <td>{{ appointment.task }} </td>
+        <td>{{ appointment.date }} </td>
+        <td>{{ appointment.time }} </td>
+      </tr>
+      {% endfor %}
+    </table>
+    <br>
+    <br>
+    <br>
+    Add Appointment:
+    <form action='{% url 'project:addappointment' %}' method='POST'>
+      {% csrf_token %}
+      Date:<input type="date" name="date">
+      <br>
+      Time:<input type="time" name="time">
+      <br>
+      Task:<input type="text" name="task">
+      <br>
+      <input type="submit" value="Add">
+    </form>
+    <br>
+    {% for message in messages %}
+    {{message.message}}<br>
+    {% endfor %}
+    <br>
+    <br>
+    <a href="{% url 'logreg:index' %}">Logout</a>
+  </body>
+</html>

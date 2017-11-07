@@ -1,0 +1,14 @@
+*{
+ margin: 0px;
+ padding: 0px;
+}
+h1{
+  color: green;
+  text-align: center;
+}
+input{
+  margin-left: 320px;
+}
+button{
+  margin-left: 372px;
+}

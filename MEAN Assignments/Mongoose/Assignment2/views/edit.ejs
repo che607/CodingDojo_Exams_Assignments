@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Tiger Assignment</title>
+  </head>
+  <body>
+    <% for (var i = 0; i < tiger.length; i++) { %>
+    <form action="/tigers/<%= tiger[i]._id %>" method="post">
+      Name:<br>
+      <input type="text" name="name" value="<%= tiger[i].name %>">
+      <br>
+      Height:<br>
+      <input type="text" name="height" value="<%= tiger[i].height %>">
+      <br>
+      Weight:<br>
+      <input type="text" name="weight" value="<%= tiger[i].weight %>">
+      <br>
+      Location:<br>
+      <input type="text" name="location" value="<%= tiger[i].location %>">
+      <br><br>
+      <input type="submit" value="Update Tiger!">
+    </form>
+    <% } %>
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+  <head>
+    <title>Partials and Custom Users</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <script src="angular/angular.js"></script>
+    <script src="angular-route/angular-route.js"></script>
+<script>
+
+    const app = angular.module('app', ['ngRoute']);
+
+    app.config(function ($routeProvider) {
+      $routeProvider
+        .when('/',{
+            templateUrl: 'partials/customizeUsers.html',
+        })
+        .when('/userList',{
+            templateUrl: 'partials/UserList.html'
+        })
+        .otherwise({
+          redirectTo: '/'
+        });
+    });
+
+      app.factory('usersFactory', function (){
+
+        let users = [
+          {firstname: 'Ricardo', lastname: 'Figueroa', favlanguage: 'JavaScript'},
+          ];
+        let factory = {};
+
+        factory.getUsers = function (callback){
+          callback(users)
+        };
+
+        factory.addUser = function(user){
+          factory.users.push(user)
+          $location.url('/userList');
+        };
+
+        factory.remove = function(user){
+          var index = factory.users.indexOf(user);
+          factory.users.splice(index, 1);
+        }
+
+        return factory;
+      });
+
+      app.controller('usersController', ['$scope', 'usersFactory', '$location', function ($scope,usersFactory, $location){
+
+        console.log($location)
+
+        $scope.products = []
+
+        usersFactory.getUsers(function (users){
+          $scope.users = users;
+        });
+
+        $scope.addUser = function (){
+          $scope.users.push($scope.newUser)
+          $location.url('/userList');
+        };
+
+        $scope.remove = function(user) {
+          var index = $scope.users.indexOf(user);
+          console.log(index)
+          $scope.users.splice(index, 1);
+        };
+
+      }]);
+
+      app.controller('listController', ['$scope', 'usersFactory', function ($scope, usersFactory){
+
+        usersFactory.getUsers(function (users){
+          $scope.users = users;
+        });
+
+      }]);
+    </script>
+  </head>
+  <body>
+    <div ng-app='app'>
+        <center><a href="#!/">Customize Users</a> | <a href="#!/userList">User List</a></center>
+        <div ng-view="">
+        </div>
+    </div>
+  </body>
+</html>

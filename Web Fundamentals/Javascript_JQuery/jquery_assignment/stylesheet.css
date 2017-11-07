@@ -1,0 +1,37 @@
+*{
+  margin:  0px;
+  padding:  0px;
+}
+#wrapper{
+  width:  850px;
+  height:  1100px;
+  padding: 15px;
+  margin:  auto;
+  background-color:  #ffff80;
+}
+h1{
+  width: 850px;
+  height: 25px;
+  text-align: center;
+  font-size: 50px;
+}
+.button1{
+  width: 95px;
+  margin-top: 60px;
+  margin-left: 35px;
+  display: inline-block;
+}
+.button2{
+  width: 95px;
+}
+p{
+  display: inline-block;
+  margin-left: 70px;
+  width: 270px;
+}
+.line{
+  background-color: black;
+  width: 850px;
+  height: 2px;
+  margin-top: 30px;
+}

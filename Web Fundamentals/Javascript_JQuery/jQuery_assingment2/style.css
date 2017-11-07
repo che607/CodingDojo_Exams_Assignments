@@ -1,0 +1,17 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+#wrapper{
+  padding: 15px;
+  width: 850px;
+  height: 850px;
+  margin: auto;
+  background-color: grey;
+}
+.photo{
+  width: 200px;
+  height: 200px;
+  display: inline;
+  margin-left: 7px;
+}

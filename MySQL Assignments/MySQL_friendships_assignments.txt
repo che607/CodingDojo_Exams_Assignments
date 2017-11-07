@@ -1,0 +1,4 @@
+SELECT users.first_name, users.last_name, users2.first_name AS friend_first_name, users2.last_name AS friend_last_name
+from users
+
+LEFT JOIN users2 ON users.id = users2.id

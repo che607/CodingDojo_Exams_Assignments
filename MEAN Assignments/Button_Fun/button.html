@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Button Fun</title>
+    <link rel="stylesheet" type="text/css" href="button.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+      $(document).ready(function(){
+
+        $(document).on('click', '.button', function(){
+          $(this).toggleClass("red");
+        });
+
+        // $(document).on('mouseenter', '.button', function(){
+        //   $(this).toggleClass("red");
+        // });
+
+        $(document).on('mouseenter mouseleave', '.button', function (ev) {
+          if(ev.type === 'mouseenter'){
+            $(this).toggleClass("green");
+          }
+          else{
+            $(this).toggleClass("blue");
+          }
+        });
+
+        // $(document).on("mouseenter mouseleave", '.button', function(){
+        //   $(this).toggleClass("blue");
+        // });
+
+
+        // $(".button").hover(function(){
+        //   $(this).toggleClass("green");
+        // });
+
+        // $(".button").click(function () {
+        //   $(this).toggleClass("red");
+        // });
+
+        $(document).keypress(function(e) {
+          if(e.which == 13) {
+            $('.button').after("<input type='button' class='button' value='Press Me!'>");
+          }
+            // $(".button").hover(function(){
+            //   $(this).toggleClass("green");
+            // });
+            //
+            // $(".button").click(function () {
+            //   $(this).toggleClass("red");
+            // });
+        });
+
+      });
+
+
+    </script>
+  </head>
+  <body>
+    <input type="button" class="button" value="Press Me!">
+  </body>
+</html>

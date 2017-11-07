@@ -1,0 +1,21 @@
+<div id="playerscontroller" ng-controller='playersController'>
+  <form name="playerForm">
+    Name:<input type="text" name="name" ng-model="newPlayer.name" minlength='4' required='required'>   <input type="submit" value="Add Player" ng-click='addPlayer()'>
+  </form>
+  <div ng-if="playerForm.name.$touched" ng-messages="playerForm.name.$error">
+     <p ng-message="required">The player name is required!</p>
+     <p ng-message="minlength">The player name must be at least 4 characters</p>
+  </div>
+  <br>
+  <br>
+  <table>
+    <tr>
+      <th>First Name</th>
+      <th>Actions</th>
+    </tr>
+    <tr ng-repeat="player in players track by $index">
+      <td>{{player.name}}</td>
+      <td><input type="submit" value="Remove Player" ng-click='remove(user)'></td>
+    </tr>
+  </table>
+</div>

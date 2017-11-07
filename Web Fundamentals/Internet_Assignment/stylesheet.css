@@ -1,0 +1,245 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+#wrapper{
+  background-color: none;
+  width: 970px;
+  height: 500px;
+  margin: auto;
+}
+.header{
+  width: 970px;
+  height: 145px;
+  background-color: none;
+}
+img{
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+.header1{
+  height: 20px;
+  width: 233px;
+  vertical-align: top;
+  display: inline-block;
+  margin-top: 28px;
+  font-size: 44px;
+  background-color: white;
+  color: #00004d;
+}
+.header2{
+  height: 42px;
+  width: 952px;
+  vertical-align: top;
+  padding: 9px;
+  margin-top: -19px;
+  background-color: #0059b3;
+  color: white;
+  font-size: 32px;
+}
+.resources{
+  background-color: none;
+  width: 200px;
+  height: 260px;
+  display: inline-block;
+  padding: 5px;
+}
+.net{
+  color: #0059b3;
+}
+.whats{
+  width: 140px;
+  height: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-display;
+  margin-top: 12px;
+}
+.internet{
+  color: red;
+}
+#wrapper1{
+  background: #dccedb;
+    background: -webkit-linear-gradient(180deg, #dccedb, #fefdfe);
+    background: -o-linear-gradient(180deg, #dccedb, #fefdfe);
+    background: -moz-linear-gradient(180deg, #dccedb, #fefdfe);
+    background: linear-gradient(180deg, #dccedb, #fefdfe);
+}
+.inter{
+  font-weight: bold;
+}
+.watch{
+  color: white;
+  background-color: #0059b3;
+  border-radius: 5px;
+  text-align: center;
+  width: 183px;
+  margin-top: 14px;
+  padding: 5px;
+  height: 18px;
+}
+.more{
+  color: white;
+  background-color: orange;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+  margin-top: 4px;
+  width: 183px;
+  height: 18px;
+}
+.line{
+  background-color: grey;
+  width: 176px;
+  height: 2px;
+  display: inline-block;
+  margin-top: 29px;
+  margin-left: 9px;
+}
+.ad{
+  width: 176px;
+  height: 257px;
+  margin-top: 29px;
+  margin-left: 9px;
+  display: inline-block;
+}
+.reinvent1{
+  background-color: none;
+  color: white;
+  margin-left: 34px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 21px;
+  margin-top: -243px;
+  width: 128px;
+  height: 10px;
+}
+.ninja{
+  width: 80;
+  height: 111px;
+  margin-top: 56px;
+  margin-left: 38px;
+}
+.learnmore{
+  width: 95px;
+  height: 10px;
+  background-color: #3399ff;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 47px;
+}
+.topbar{
+  width: 746px;
+  height: 610px;
+  background-color: none;
+  display: inline-block;
+  vertical-align: top;
+  color: #0059b3;
+}
+.dns{
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 6px;
+}
+.home{
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  vertical-align: top;
+}
+.topbarright{
+  background-color: none;
+  width: 172px;
+  height: 65px;
+  display: inline-block;
+  vertical-align: top;
+}
+.phone{
+  display: inline-block;
+  width: 43px;
+  height: 43px;
+  margin-top: 8px;
+  margin-left: 460px;
+}
+.info{
+  display: inline-block;
+  color: black;
+  font-size: 11px;
+  width: 174px;
+  text-align: right;
+}
+.number{
+  display: inline-block;
+  font-size: 30px;
+  text-align: right;
+  width: 177px;
+}
+.info1{
+  display: inline-block;
+  color: black;
+  font-size: 11px;
+  text-align: right;
+  width: 177px;
+}
+.divider{
+  background-color: grey;
+  width: 737px;
+  height: 2px;
+  display: inline-block;
+}
+.clients{
+  color: #0059b3;
+  font-weight: bold;
+  font-size: 25px;
+  display: inline-block;
+  width: 451px;
+  vertical-align: top;
+}
+.clients1{
+  color: #0059b3;
+  font-weight: bold;
+  font-size: 25px;
+  display: inline-block;
+  vertical-align: top;
+  width: 397px;
+}
+li{
+  width: 632px;
+  margin-left: 36px;
+  color: black;
+}
+p{
+  color: black;
+}
+.client_server{
+  width: 347px;
+  height: 130px;
+  margin-left: 195px;
+  display: inline-block;
+}
+.box{
+  background-color: none;
+  width: 630px;
+  height: 118px;
+  display: inline-block;
+  padding: 15px;
+  border-style: solid;
+  border-color: #3399ff;
+}
+.html{
+  display: inline-block;
+  vertical-align: top;
+}
+.end{
+  display: inline-block;
+  width: 475px;
+  color: black;
+}
+.bottom{
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}

@@ -1,0 +1,24 @@
+1.
+Went to GITHUB and and created a new repo called basic_repo
+
+2.
+c:\Users\ricardo>md basic_repo
+c:\Users\ricardo>cd basic_repo
+c:\Users\ricardo\basic_repo>git init
+
+3.
+c:\Users\ricardo\basic_repo>index.html
+c:\Users\ricardo\basic_repo>style.css
+c:\Users\ricardo\basic_repo>aboutMe.txt
+
+4.
+c:\Users\ricardo\basic_repo>git add .
+c:\Users\ricardo\basic_repo>git commit -m "new files"
+c:\Users\ricardo\basic_repo>git remote add origin https://github.com/che607/basic_repo.git
+c:\Users\ricardo\basic_repo>git push -u origin master
+
+5.
+c:\Users\ricardo\basic_repo>index.html
+c:\Users\ricardo\basic_repo>style.css
+c:\Users\ricardo\basic_repo>aboutMe.txt
+c:\Users\ricardo\basic_repo>git push -u origin master

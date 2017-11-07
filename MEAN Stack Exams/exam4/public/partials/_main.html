@@ -1,0 +1,26 @@
+<ng-include src="'partials/shared/_nav.html'"></ng-include>
+<div ng-controller="qaController">
+<br>
+<h1>Hi, {{currentUser}}!</h1>
+<br>
+<a href="#!/addQuestion">Add A Question</a>
+<br>
+<br>
+<form class='searchbar'>
+  <input ng-model='search.$' placeholder="Search">
+</form>
+<br>
+<br>
+<table ng-init='getQuestions()'>
+  <tr>
+    <th>Question</th>
+    <th>Answers</th>
+    <th>Action</th>
+  </tr>
+  <tr ng-repeat="question in questions | filter:search:strict">
+    <td>{{question.question}}</td>
+    <td>{{question.answerCount}}</td>
+    <td><a href="#!/showAnswer/{{question._id}}"><button>Show</button></a><br><a href="#!/answerQuestion/{{question._id}}"><button>Answer</button></a></td>
+  </tr>
+</table>
+</div>

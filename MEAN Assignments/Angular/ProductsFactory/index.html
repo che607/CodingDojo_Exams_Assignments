@@ -1,0 +1,81 @@
+<html ng-app='myApp'>
+<head>
+  <title>Products</title>
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <script src='bower_components/angular/angular.js'></script>
+  <script type='text/javascript'>
+    const myApp = angular.module('myApp', []);
+
+    myApp.factory('productsFactory', function (){
+
+      let products = [
+        {productname: 'iPhone', productprice: 700},
+        {productname: 'Television', productprice: 500},
+        {productname: 'Headphones', productprice: 15}
+        ];
+      let factory = {};
+
+      factory.getProducts = function (callback){
+        callback(products)
+      };
+
+      factory.addProduct = function(product){
+        factory.products.push(product)
+      };
+
+      factory.remove = function(user){
+        var index = factory.products.indexOf(user);
+        factory.products.splice(index, 1);
+      }
+
+      return factory;
+    });
+
+    myApp.controller('productsController', ['$scope', 'productsFactory', function ($scope, productsFactory){
+
+      $scope.products = []
+
+      productsFactory.getProducts(function (products){
+        $scope.products = products;
+      });
+
+      $scope.addProduct = function (){
+        $scope.products.push($scope.newProduct)
+      };
+
+      $scope.remove = function(user) {
+        var index = $scope.products.indexOf(user);
+        console.log(index)
+        $scope.products.splice(index, 1);
+      };
+
+    }]);
+
+  </script>
+</head>
+<body>
+    <div ng-controller='productsController'>
+      <form>
+        Product Name:<input type="text" ng-model="newProduct.productname">
+        <br>
+        Product Price:<input type="text" ng-model="newProduct.productprice">
+        <br><br>
+        <input type="submit" value="Add New Product" ng-click='addProduct()'>
+      </form>
+      <br>
+      <br>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Actions</th>
+        </tr>
+        <tr ng-repeat="product in products track by $index">
+          <td>{{product.productname}}</td>
+          <td>{{product.productprice | currency : symbol : fractionSize}}</td>
+          <td><input type="submit" value="Delete" ng-click='remove(product)'></td>
+        </tr>
+      </table>
+    </div>
+</body>
+</html>

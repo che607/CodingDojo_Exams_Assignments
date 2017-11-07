@@ -1,0 +1,15 @@
+// Write a loop that will go through
+// an array, find the minimum value,
+// and then return it
+
+function array(array){
+  var min = array[0]
+  for(idx = 1; idx < array.length; idx++){
+    if(array[idx] < min){
+      min = array[idx];
+    }
+  }
+  console.log(min)
+}
+
+array([4,3,6,-5,-10,5])
