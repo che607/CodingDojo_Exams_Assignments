@@ -1,0 +1,28 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+#wrapper{
+  margin: auto;
+  background-color: grey;
+  width: 850px;
+  padding: 15px;
+}
+h1{
+  font-weight: bold;
+  font-size: 70px;
+  text-align: center;
+}
+#pokemon_images{
+  display: inline-block;
+  width: 695px;
+}
+#pokedex{
+  display: inline-block;
+  width: 145px;
+  height: 440px;
+  margin-top: 30px;
+  vertical-align: top;
+  border-style: solid;
+  border-color: red;
+}
